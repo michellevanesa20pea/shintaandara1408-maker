@@ -1,0 +1,110 @@
+:root {
+    /* Warna utama */
+    --pink: #FCE4EC;
+    --pink-muda: #FFF1F5;
+    --pink-tua: #D98FA3;
+    --pink-hover: #F8D5E0;
+    /* Warna dasar */
+    --putih: #FFFFFF;
+    --teks: #49343D;
+    --redup: #89747D;
+    /* Garis&bayangan */
+    --garis: #E8D9DE;
+    --bayangan: #49343D12;
+    /* Warna tambahan */
+    --bahaya: #B94D5B;
+    /* Font */
+    --font-isi: "Patrick Hand", "Comic Sans MS", "Segoe Print", cursive;
+    --font-judul: "Caveat", "Patrick Hand", "Comic Sans MS", cursive;
+}
+
+/*STATUS PESANAN*/
+.Menunggu {
+    background: var(--pink-muda);
+    color: var(--teks);
+    border: 1px solid var(--pink);
+}
+.Diproses {
+    background: var(--pink);
+    color: var(--teks);
+    border: 1px solid var(--pink-tua);
+}
+.Selesai {
+    background: var(--pink-hover);
+    color: var(--teks);
+    border: 1px solid var(--pink-tua);
+}
+.Diambil {
+    background: var(--pink-tua);
+    color: var(--putih);
+    border: 1px solid var(--pink-tua);
+}
+.Aktif {
+    background: var(--pink);
+    color: var(--teks);
+    border: 1px solid var(--pink-tua);
+}
+.Nonaktif {
+    background: var(--pink-muda);
+    color: var(--bahaya);
+    border: 1px solid var(--pink-tua);
+}
+
+/*TOMBOL*/
+.btn {
+    background: var(--pink-muda);
+    color: var(--teks);
+    border: 1px solid var(--garis);
+    transition: 0.2s ease;
+}
+.btn:hover {
+    background: var(--pink-hover);
+    border-color: var(--pink-tua);
+}
+.btn.utama {
+    background: var(--pink-tua);
+    color: var(--putih);
+    border-color: var(--pink-tua);
+}
+.btn.utama:hover {
+    background: var(--pink-hover);
+    color: var(--teks);
+}
+
+/*KARTU*/
+.kartu.proses {
+    border-left-color: var(--pink-tua);
+}
+.kartu.selesai {
+    border-left-color: var(--pink);
+}
+
+/* ===== TAMBAHAN (style dasar yang belum ada) ===== */
+body { font-family: var(--font-isi); background: var(--pink-muda); color: var(--teks); font-size: 1.1rem; }
+h1,h2,h3,h4,h5,h6,.navbar-brand { font-family: var(--font-judul); }
+h4 { font-size: 2rem; }
+.navbar { border-color: var(--garis) !important; }
+.card { border-color: var(--garis); box-shadow: 0 2px 8px var(--bayangan); }
+.table { --bs-table-bg: var(--putih); }
+.redup { color: var(--redup); }
+.btn.bahaya { background: var(--bahaya); color: var(--putih); border-color: var(--bahaya); }
+.btn.bahaya:hover { background: var(--bahaya); color: var(--putih); opacity: .85; }
+.kecil-btn { padding: .15rem .6rem; font-size: .9rem; }
+.lencana { display: inline-block; padding: .1rem .8rem; border-radius: 999px; font-size: .9rem; }
+.kartu { background: var(--putih); border: 1px solid var(--garis); border-left: 5px solid var(--pink-hover);
+         border-radius: 12px; padding: 1rem; margin-bottom: .8rem; }
+/* modal & toast (nama kelas sengaja bukan .modal/.toast agar tidak bentrok dengan Bootstrap) */
+.latar { position: fixed; inset: 0; background: #49343D66; display: none; align-items: center; justify-content: center; z-index: 2000; }
+.latar.tampil { display: flex; }
+.kotak { background: var(--putih); border-radius: 14px; padding: 1.5rem; width: min(92vw, 420px); max-height: 90vh; overflow: auto; }
+.baris { display: flex; gap: .5rem; justify-content: flex-end; margin-top: 1rem; }
+.notif { display: none; position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+         background: var(--pink-tua); color: var(--putih); padding: .6rem 1.2rem; border-radius: 10px; z-index: 3000; }
+.notif.gagal { background: var(--bahaya); }
+/* struk */
+.struk { max-width: 360px; margin: auto; background: var(--putih); border: 1px dashed var(--pink-tua); padding: 1.2rem; font-family: monospace; }
+.struk p { display: flex; justify-content: space-between; margin: .2rem 0; }
+.struk-judul { text-align: center; font-weight: 700; font-size: 1.4rem; }
+.struk-tengah { text-align: center; }
+.struk-total { font-weight: 700; }
+@media print { nav, .alert, .tanpa-cetak { display: none !important; } body { background: #fff; } }

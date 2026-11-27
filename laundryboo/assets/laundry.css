@@ -1,0 +1,80 @@
+:root {
+    /* Warna utama */
+    --pink: #FCE4EC;
+    --pink-muda: #FFF1F5;
+    --pink-tua: #D98FA3;
+    --pink-hover: #F8D5E0;
+    /* Warna dasar */
+    --putih: #FFFFFF;
+    --teks: #49343D;
+    --redup: #89747D;
+    /* Garis&bayangan */
+    --garis: #E8D9DE;
+    --bayangan: #49343D12;
+    /* Warna tambahan */
+    --bahaya: #B94D5B;
+    /* Font */
+    --font-isi: "Patrick Hand", "Comic Sans MS", "Segoe Print", cursive;
+    --font-judul: "Caveat", "Patrick Hand", "Comic Sans MS", cursive;
+}
+
+/*STATUS PESANAN*/
+.Menunggu {
+    background: var(--pink-muda);
+    color: var(--teks);
+    border: 1px solid var(--pink);
+}
+.Diproses {
+    background: var(--pink);
+    color: var(--teks);
+    border: 1px solid var(--pink-tua);
+}
+.Selesai {
+    background: var(--pink-hover);
+    color: var(--teks);
+    border: 1px solid var(--pink-tua);
+}
+.Diambil {
+    background: var(--pink-tua);
+    color: var(--putih);
+    border: 1px solid var(--pink-tua);
+}
+.Aktif {
+    background: var(--pink);
+    color: var(--teks);
+    border: 1px solid var(--pink-tua);
+}
+.Nonaktif {
+    background: var(--pink-muda);
+    color: var(--bahaya);
+    border: 1px solid var(--pink-tua);
+}
+
+/*TOMBOL*/
+.btn {
+    background: var(--pink-muda);
+    color: var(--teks);
+    border: 1px solid var(--garis);
+    transition: 0.2s ease;
+}
+.btn:hover {
+    background: var(--pink-hover);
+    border-color: var(--pink-tua);
+}
+.btn.utama {
+    background: var(--pink-tua);
+    color: var(--putih);
+    border-color: var(--pink-tua);
+}
+.btn.utama:hover {
+    background: var(--pink-hover);
+    color: var(--teks);
+}
+
+/*KARTU*/
+.kartu.proses {
+    border-left-color: var(--pink-tua);
+}
+.kartu.selesai {
+    border-left-color: var(--pink);
+}
